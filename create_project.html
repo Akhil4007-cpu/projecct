@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project</title>
+    <link rel="stylesheet" href="./Create Project_files/styles.css">
+    <style>
+        .search-bar {
+            width: 750px;
+            height: 30px;
+            font-size: 16px;
+        }
+        .box-container {
+            display: flex;
+            gap: 10px;
+        }
+        .box {
+            width: 150px;
+            height: 115px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100vh;
+            background-color: aliceblue;
+            border-top-left-radius: 50% 100%;
+            border-bottom-left-radius: 50% 100%;
+        }
+        .oval-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            background-color: aliceblue;
+            border-top-left-radius: 50% 100%;
+            border-bottom-left-radius: 50% 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Project</h1>
+    <p>Explore what's possible when you collaborate with your team. Edit project details anytime in project settings.</p>
+    <br>
+    <h2>Templates</h2>
+    <form action="http://127.0.0.1:5500/create-project" method="post">
+        <div class="box-container">
+            <label class="box">
+                <input type="radio" name="template" value="Project Management" required>
+                <div>
+                    <h3>Project Management</h3>
+                    <p>Manage activities for completing a business project.</p>
+                </div>
+            </label>
+            <label class="box">
+                <input type="radio" name="template" value="Software Development" required>
+                <div>
+                    <h3>Software Development</h3>
+                    <p>Plan sprints and track progress for development teams.</p>
+                </div>
+            </label>
+            <label class="box">
+                <input type="radio" name="template" value="Marketing Campaign" required>
+                <div>
+                    <h3>Marketing Campaign</h3>
+                    <p>Coordinate tasks and deadlines for marketing efforts.</p>
+                </div>
+            </label>
+        </div>
+        <br>
+        <h2>Name*</h2>
+        <input type="text" name="projectName" placeholder="Try a Team name, Project goal, Milestone.." class="search-bar" required>
+        <br><br>
+        <button type="submit" class="create-button">Create Project</button>
+    </form>
+    <div class="oval-background"></div>
+    <img src="image/image.png" alt="Center Image" class="center-image">
+</body>
+</html>
